@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html ng-app="pokemonApp">
+<head>
+    <meta charset="utf-8">
+    <title>Pokemon Go Heat Map</title>
+
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxUwNycYzt3GGO0FvZGYJd3zUQQDEFal8&libraries=visualization"></script>
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/googservice.js"></script>
+    <script src="app/addEntryCtrl.js"></script>
+    <script src="app/queryCtrl.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Pokemon Go Heat Map</h1>
+        <ul class="nav nav-tabs">
+
+            <li role="presentation"><a href="/#/entry">Report</a></li>
+            <li role="presentation"><a href="/#/visualize">Visualize</a></li>
+            
+        </ul>
+        <div class="row content">
+            <div ng-view></div>
+            <div class="col-md-6">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

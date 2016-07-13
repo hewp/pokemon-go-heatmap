@@ -1,0 +1,28 @@
+<div class="col-md-5">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2 class="panel-title text-center">Report your catch!<span class="glyphicon glyphicon-map-marker"></span></h2>
+        </div>
+        <div class="panel-body">
+            <form name ="addForm" novalidate>
+                <div class="form-group">
+                    <label for="username">Username <span class="badge">All fields required</span></label>
+                    <input type="text" class="form-control" id="username" placeholder="Ash Ketchum" ng-model="formData.username" required>
+                </div>
+                <div class="form-group">
+                    <label for="language">Pokemon</label>
+                    <input type="text" class="form-control" placeholder="Zubat" ng-model="formData.pokemon" required>
+                </div>
+                <div class="form-group">
+                    <label for="latitude">Latitude</label>
+                    <input type="text" class="form-control" id="latitude" value="39.500" ng-model="formData.latitude" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="longitude">Longitude</label>
+                    <input type="text" class="form-control" id="longitude" value="-98.350" ng-model="formData.longitude" readonly>
+                </div>
+                <button type="submit" class="btn btn-success" ng-click="createEntry()" ng-disabled="addForm.$invalid">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
