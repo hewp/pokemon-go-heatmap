@@ -11,3 +11,5 @@ var app = angular.module('pokemonApp', ['entryCtrl', 'queryCtrl', 'geolocation',
 
         }).otherwise({redirectTo:'/entry'})
     });
+
+//angular doing ajax call to your template

@@ -16,3 +16,5 @@ require('./app/routes.js')(app);
 
 app.listen(port);
 console.log('App listening on port ' + port);
+
+//__dirname = path to what is execued in this case its ..../pokemon-go-heatmap

@@ -31,8 +31,8 @@ entryCtrl.controller('entryCtrl', function($scope, $http, $rootScope, geolocatio
         geolocation.getLocation().then(function(data){
             coords = {lat:data.coords.latitude, long:data.coords.longitude};
 
-            $scope.formData.longitude = parseFloat(coords.long).toFixed(2);
-            $scope.formData.latitude = parseFloat(coords.lat).toFixed(2);
+            $scope.formData.longitude = parseFloat(coords.long).toFixed(5);
+            $scope.formData.latitude = parseFloat(coords.lat).toFixed(5);
             googservice.refresh(coords.lat, coords.long);
         });
     };
